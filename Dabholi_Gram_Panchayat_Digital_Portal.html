@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>దభోలి గ్రామ పంచాయతీ</title>
+<style>
+:root{--green:#087443;--green2:#0b9655;--light:#eef8f2;--blue:#1677c8;--orange:#ef9b19;--red:#d94b4b;--text:#173128}
+*{box-sizing:border-box} body{margin:0;font-family:"Noto Sans Telugu","Nirmala UI",Arial,sans-serif;background:#f5f8f6;color:var(--text)}
+header{background:linear-gradient(135deg,var(--green),#075b38);color:white;padding:18px 16px 24px;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #0002}
+.brand{display:flex;align-items:center;gap:12px;max-width:1050px;margin:auto}.logo{width:52px;height:52px;border-radius:50%;background:white;color:var(--green);display:grid;place-items:center;font-size:25px;font-weight:bold}.brand h1{font-size:21px;margin:0}.brand p{margin:3px 0 0;font-size:13px;opacity:.9}
+nav{max-width:1050px;margin:15px auto 0;display:flex;gap:7px;overflow:auto}nav button{border:1px solid #ffffff55;background:#ffffff14;color:white;padding:8px 12px;border-radius:18px;white-space:nowrap;cursor:pointer}
+main{max-width:1050px;margin:auto;padding:18px 14px 90px}.hero{background:linear-gradient(120deg,#e7f7ee,#fff);border-radius:20px;padding:25px 20px;margin-bottom:18px;border:1px solid #d7eadf}.hero h2{font-size:27px;margin:0 0 7px;color:var(--green)}.hero p{margin:0 0 17px}.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--green);color:#fff;font-weight:600;cursor:pointer}.btn.red{background:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:white;border-radius:15px;padding:16px;border:1px solid #e2ebe6;box-shadow:0 2px 8px #1731280b;cursor:pointer}.card .icon{font-size:27px}.card h3{font-size:16px;margin:7px 0 3px}.card p{font-size:12px;color:#60736a;margin:0}.section{margin-top:25px}.section h2{font-size:21px;color:var(--green);margin-bottom:12px}.notice{background:white;border-left:5px solid var(--green2);padding:13px 15px;margin:9px 0;border-radius:10px;box-shadow:0 2px 7px #0000000a}.notice b{display:block}.notice small{color:#708078}.about{background:#fff;border-radius:15px;padding:18px;border:1px solid #e2ebe6;line-height:1.7}
+form{background:white;padding:18px;border-radius:15px;border:1px solid #e2ebe6}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:13px;font-weight:600;display:block;margin:8px 0 5px}input,select,textarea{width:100%;padding:11px;border:1px solid #ccd9d2;border-radius:9px;font:inherit}textarea{min-height:100px;resize:vertical}.full{grid-column:1/-1}.hidden{display:none}.success{padding:13px;background:#e9f8ef;color:#17643e;border-radius:10px;margin-top:12px}
+footer{background:#073f2a;color:white;text-align:center;padding:24px 14px;font-size:13px}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.full{grid-column:auto}.hero h2{font-size:23px}.brand h1{font-size:18px}}
+@media(min-width:900px){.hero{padding:35px}.hero h2{font-size:32px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">క</div>
+    <div><h1>దభోలి గ్రామ పంచాయతీ</h1><p>మండలం: జైనూర్ • జిల్లా: ఆసిఫాబాద్ • తెలంగాణ</p></div>
+  </div>
+  <nav>
+    <button onclick="show('home')">హోమ్</button><button onclick="show('services')">ప్రజా సేవలు</button><button onclick="show('complaint')">ఫిర్యాదు</button><button onclick="show('notices')">నోటీసులు</button><button onclick="show('works')">అభివృద్ధి పనులు</button><button onclick="show('contact')">సంప్రదించండి</button>
+  </nav>
+</header>
+
+<main>
+<section id="home">
+  <div class="hero">
+    <h2>మా దభోలికు స్వాగతం 🙏</h2>
+    <p>ప్రజలకు సమాచారం, సేవలు మరియు పంచాయతీ కార్యక్రమాలను సులభంగా అందించే డిజిటల్ వేదిక.</p>
+    <button class="btn" onclick="show('services')">ప్రజా సేవలు చూడండి →</button>
+    <button class="btn red" onclick="show('complaint')" style="margin-left:7px">🚨 ఫిర్యాదు చేయండి</button>
+  </div>
+  <div class="grid">
+    <div class="card" onclick="show('about')"><div class="icon">🏠</div><h3>గ్రామ సమాచారం</h3><p>పంచాయతీ వివరాలు</p></div>
+    <div class="card" onclick="show('services')"><div class="icon">📋</div><h3>ప్రజా సేవలు</h3><p>దరఖాస్తులు & సమాచారం</p></div>
+    <div class="card" onclick="show('notices')"><div class="icon">📢</div><h3>నోటీసులు</h3><p>ముఖ్యమైన ప్రకటనలు</p></div>
+    <div class="card" onclick="show('complaint')"><div class="icon">🚨</div><h3>ఫిర్యాదులు</h3><p>సమస్యను తెలియజేయండి</p></div>
+    <div class="card" onclick="show('schemes')"><div class="icon">🏛️</div><h3>ప్రభుత్వ పథకాలు</h3><p>పథకాల సమాచారం</p></div>
+    <div class="card" onclick="show('works')"><div class="icon">🚧</div><h3>అభివృద్ధి పనులు</h3><p>పనుల పురోగతి</p></div>
+    <div class="card" onclick="show('youth')"><div class="icon">👨‍🎓</div><h3>యువత నమోదు</h3><p>నిరుద్యోగుల సర్వే</p></div>
+    <div class="card" onclick="show('contact')"><div class="icon">☎️</div><h3>సంప్రదించండి</h3><p>ముఖ్యమైన నంబర్లు</p></div>
+  </div>
+  <div class="section"><h2>📢 ముఖ్యమైన సమాచారం</h2>
+    <div class="notice"><b>గ్రామ పంచాయతీ ప్రకటన</b><small>తాజా నోటీసులు ఇక్కడ ప్రచురించబడతాయి.</small></div>
+    <div class="notice"><b>గ్రామ సభ / సమావేశం</b><small>తేదీ, సమయం మరియు స్థలం వివరాలు ఇక్కడ కనిపిస్తాయి.</small></div>
+  </div>
+</section>
+
+<section id="services" class="hidden">
+<h2 class="section">📋 ప్రజా సేవలు</h2><div class="grid">
+<div class="card"><div class="icon">📄</div><h3>జనన ధృవపత్రం</h3><p>దరఖాస్తు విధానం & అవసరమైన పత్రాలు</p></div>
+<div class="card"><div class="icon">📄</div><h3>మరణ ధృవపత్రం</h3><p>దరఖాస్తు సమాచారం</p></div>
+<div class="card"><div class="icon">🏠</div><h3>ఇంటి పన్ను</h3><p>పన్ను వివరాలు / చెల్లింపు సమాచారం</p></div>
+<div class="card"><div class="icon">💧</div><h3>నీటి సమస్య</h3><p>నీటి సరఫరా సంబంధిత ఫిర్యాదు</p></div>
+<div class="card"><div class="icon">📝</div><h3>సాధారణ దరఖాస్తు</h3><p>పంచాయతీకి అభ్యర్థన పంపండి</p></div>
+<div class="card"><div class="icon">📜</div><h3>ధృవపత్రాల సమాచారం</h3><p>అందుబాటులో ఉన్న సేవల వివరాలు</p></div>
+</div></section>
+
+<section id="complaint" class="hidden">
+<h2 class="section">🚨 ప్రజా ఫిర్యాదు నమోదు</h2>
+<form onsubmit="submitComplaint(event)">
+<div class="row">
+<div><label>పేరు</label><input required placeholder="మీ పేరు"></div>
+<div><label>మొబైల్ నంబర్</label><input required type="tel" placeholder="10 అంకెల మొబైల్ నంబర్"></div>
+<div><label>వార్డు</label><select required><option value="">ఎంచుకోండి</option><option>వార్డు 1</option><option>వార్డు 2</option><option>వార్డు 3</option><option>వార్డు 4</option><option>ఇతర</option></select></div>
+<div><label>సమస్య రకం</label><select required><option value="">ఎంచుకోండి</option><option>వీధి దీపం</option><option>తాగునీరు</option><option>పారిశుధ్యం</option><option>డ్రైనేజీ</option><option>రోడ్డు</option><option>చెత్త సేకరణ</option><option>ఇతర</option></select></div>
+<div class="full"><label>సమస్య వివరాలు</label><textarea required placeholder="సమస్యను వివరంగా వ్రాయండి"></textarea></div>
+</div><button class="btn" type="submit">ఫిర్యాదు Submit చేయండి</button><div id="success" class="success hidden"></div>
+</form></section>
+
+<section id="notices" class="hidden"><h2 class="section">📢 నోటీసులు & ప్రకటనలు</h2>
+<div class="notice"><b>గ్రామ పంచాయతీ తాజా ప్రకటన</b><small>Admin Panel ద్వారా కొత్త నోటీసులు ఇక్కడ జోడించవచ్చు.</small></div>
+<div class="notice"><b>గ్రామ సభ సమాచారం</b><small>తేదీ / సమయం / స్థలం</small></div></section>
+
+<section id="works" class="hidden"><h2 class="section">🚧 అభివృద్ధి పనులు</h2>
+<div class="grid"><div class="card"><div class="icon">🚰</div><h3>తాగునీటి పనులు</h3><p>పురోగతి: సమాచారం త్వరలో</p></div><div class="card"><div class="icon">💡</div><h3>వీధి దీపాలు</h3><p>పురోగతి: సమాచారం త్వరలో</p></div><div class="card"><div class="icon">🧹</div><h3>పారిశుధ్య పనులు</h3><p>పురోగతి: సమాచారం త్వరలో</p></div></div></section>
+
+<section id="schemes" class="hidden"><h2 class="section">🏛️ ప్రభుత్వ పథకాలు</h2><div class="about">గ్రామ ప్రజలకు సంబంధించిన ప్రభుత్వ పథకాలు, అర్హతలు, అవసరమైన పత్రాలు మరియు అధికారిక దరఖాస్తు మార్గాలను ఇక్కడ ప్రచురించవచ్చు. సమాచారం అధికారిక వనరుల ఆధారంగా మాత్రమే Admin Panel ద్వారా జోడించాలి.</div></section>
+
+<section id="youth" class="hidden"><h2 class="section">👨‍🎓 యువత / నిరుద్యోగుల నమోదు</h2><div class="about">విద్యార్హతలు, నైపుణ్యాలు, ఉద్యోగ స్థితి, అవసరమైన శిక్షణ వంటి వివరాల కోసం ప్రత్యేక Survey Formను ఈ విభాగానికి అనుసంధానం చేయవచ్చు.</div></section>
+
+<section id="about" class="hidden"><h2 class="section">🏠 గ్రామ పంచాయతీ సమాచారం</h2><div class="about"><b>గ్రామ పంచాయతీ:</b> దభోలి<br><b>మండలం:</b> జైనూర్<br><b>జిల్లా:</b> ఆసిఫాబాద్<br><b>రాష్ట్రం:</b> తెలంగాణ<br><br>ఈ విభాగంలో పంచాయతీ వివరాలు, గ్రామ ప్రొఫైల్, వార్డులు, ముఖ్యమైన అధికారులు మరియు ఇతర అధికారిక సమాచారాన్ని చేర్చవచ్చు.</div></section>
+
+<section id="contact" class="hidden"><h2 class="section">☎️ సంప్రదించండి</h2><div class="about"><b>దభోలి గ్రామ పంచాయతీ</b><br>జైనూర్ మండలం, ఆసిఫాబాద్ జిల్లా, తెలంగాణ<br><br>📞 పంచాయతీ కార్యాలయం: <i>నంబర్ జోడించాలి</i><br>📍 కార్యాలయ చిరునామా: <i>వివరాలు జోడించాలి</i></div></section>
+</main>
+<footer>© 2026 దభోలి గ్రామ పంచాయతీ • Digital Gram Panchayat Portal</footer>
+<script>
+function show(id){
+ document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function submitComplaint(e){
+ e.preventDefault();
+ const s=document.getElementById('success');
+ s.textContent='ధన్యవాదాలు! ఇది ప్రస్తుతం Demo మాత్రమే. తదుపరి versionలో ఈ ఫిర్యాదు Admin Dashboardలో నిజంగా సేవ్ అయ్యేలా database అనుసంధానం చేస్తాం.';
+ s.classList.remove('hidden');
+}
+</script>
+</body></html>
